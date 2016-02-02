@@ -32,7 +32,7 @@ public class Servlet extends javax.servlet.http.HttpServlet  {
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
 
-       
+
 
     }
 
@@ -49,9 +49,12 @@ public class Servlet extends javax.servlet.http.HttpServlet  {
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("To", "+13128748830")); // Replace with a valid phone number for your account.
             params.add(new BasicNameValuePair("From", "+15598235766")); // Replace with a valid phone number for your account.
-            params.add(new BasicNameValuePair("Body", "Where's Wallace?"));
+            params.add(new BasicNameValuePair("Body", "Can we get him?"));
             //params.add(new BasicNameValuePair("MediaUrl", "http://4.bp.blogspot.com/-3qr8VGDrWJ4/VCLeoaSksjI/AAAAAAAAADA/bI1KrRShT9g/s1600/how%2Bto%2Bpotty%2Btrain%2Ba%2Bhusky%2Bpuppy.png"));
             Message sms = messageFactory.create(params);
+
+
+
 
 
         }catch(Exception e){
@@ -66,7 +69,7 @@ public class Servlet extends javax.servlet.http.HttpServlet  {
             Account mainAccount = client.getAccount();
             CallFactory callFactory = mainAccount.getCallFactory();
             Map<String, String> callParams = new HashMap<String, String>();
-            callParams.put("To", "+13128748830"); // Replace with your phone number
+            callParams.put("To", "+13128774221"); // Replace with your phone number
             callParams.put("From", "+15598235766"); // Replace with a Twilio number
             callParams.put("Url", "http://demo.twilio.com/welcome/voice/");
             // Make the call
